@@ -18,7 +18,7 @@ const Header = () => {
                 <ul class="dropdown">
                     <li><a href="https://www.linkedin.com/in/kambhampati-hemanth/" target="_blank" rel="noopener noreferrer">Profile</a></li>
                     <li><a href="#">Contact Me</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><Link to="/">Logout</Link></li>
                 </ul>
                 </li>
             </ul>
