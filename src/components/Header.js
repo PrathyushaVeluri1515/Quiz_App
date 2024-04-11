@@ -5,6 +5,7 @@ const Header = () => {
     return (
         <div className="header">
             <Link to="/"><img className="header__icon" src="Quiz_logo.png" alt="logo" /></Link>
+            <h1>Qiuz App</h1>
             <nav role="navigation" class="primary-navigation">
             <ul>
                 <li><a href="#"><div className="wrapper">

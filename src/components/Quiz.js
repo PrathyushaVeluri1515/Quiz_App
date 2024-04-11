@@ -35,7 +35,6 @@ function Quiz() {
     },[clickedOption])
   return (
     <div>
-        <p className="heading-txt">Quiz APP</p>
         <div className="container">
             {showResult ? (
                 <QuizResult score={score} totalScore={QuizData.length} tryAgain={resetAll}/>
