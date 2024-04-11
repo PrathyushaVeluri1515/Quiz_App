@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { QuizData } from '../Data/QuizData'
 import QuizResult from './QuizResult';
 import { useResult } from '../customHooks/ResultProvider';
+import Header from './Header';
 function Quiz() {
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const [score,setScore] = useState(0);
@@ -34,8 +35,10 @@ function Quiz() {
         setResultArray(prevArray=> [...prevArray , clickedOption])
     },[clickedOption])
   return (
+    <>
+    <Header />
     <div>
-        <div className="container">
+        <div className="containers">
             {showResult ? (
                 <QuizResult score={score} totalScore={QuizData.length} tryAgain={resetAll}/>
             ):(
@@ -64,6 +67,7 @@ function Quiz() {
             </>)}
         </div>
     </div>
+    </>
   )
 }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { QuizData } from '../Data/QuizData'
 import { useResult } from '../customHooks/ResultProvider';
 import { Link } from 'react-router-dom';
-
+import Header from './Header';
 export default function ShowResults(){
     const [currentQuestion,setCurrentQuestion]=useState(0);
     const {resultArray} = useResult()
@@ -12,9 +12,11 @@ export default function ShowResults(){
         
     }
     return (
+        <>
+        <Header />
         <div>
             <p className="heading-txt">Results</p>
-            <div className="container">
+            <div className="containers">
                 <div className="question">
                     <span id="question-number">{currentQuestion+1}. </span>
                     <span id="question-txt">{QuizData[currentQuestion].question}</span>
@@ -33,5 +35,6 @@ export default function ShowResults(){
                 {currentQuestion+1 !== QuizData.length ? <input type="button" value="Next" id="next-button" onClick={changeQuestion}/> : <Link className="custom-btn" to="/">Exit</Link> }
             </div>
         </div>
+        </>
     )
 }
